@@ -1,0 +1,65 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}appointment management system - about{% endblock %}
+{% block content %}
+
+    <div class="containerr mt-5">
+        <div class="container text-center">
+            <h1 class="fw-bold display-5 text-success">Book Your Appointment</h1>
+            <b class="mt-2" style="font-size:1.5rem;">
+                <a href="{% url 'index'%}" class="text-danger text-decoration-none">Home</a>
+                <i class="fa-solid fa-circle fa-2xs" style="color: #f72c08;"></i>
+                <a href="{% url 'bookappointment'%}" class="text-dark text-decoration-none">BookNow</a>
+            </b>
+        </div>
+    </div>
+
+    <div class="container mt-5 col-md-6 mx-auto">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} text-center">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="POST" class="mt-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" name="name" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Phone</label>
+                <input type="text" class="form-control" name="phone" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Appointment Date</label>
+                <input type="date" class="form-control" name="date" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Appointment Time</label>
+                <input type="time" class="form-control" name="time" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Service Type</label>
+                <select class="form-select" name="status" required>
+                    <option value="">Select Service</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Office Interview">Office Interview</option>
+                    <option value="Business Meeting">Business Meeting</option>
+                    <option value="Beauty Parlour">Beauty Parlour</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Submit Appointment</button>
+        </form>
+    </div>
+{%endblock %}

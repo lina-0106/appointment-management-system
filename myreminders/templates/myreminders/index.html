@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}appointment reminder system - about{% endblock %}
+{% block content %}
+    <div class=" hero-section text-center">
+        <div class="container mt-5 hero-content">
+            <h1 class="text-dark">Appointment Management System</h1>
+            <p class="text-primary-emphasis">
+                Easily book and manage your appointments online
+            </p>
+            <button type="button" class="btn btn-secondary"><a href="{% url 'bookappointment'%}"
+                    class="text-white text-decoration-none">Book Appointment</a></button>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row text-center">
+
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 shadow">
+                    <h5 class="text-primary-emphasis">Easy Booking</h5>
+                    <p>
+                        Users can book appointments quickly using a simple online form.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 shadow">
+                    <h5 class="text-primary-emphasis">Appointment Management System</h5>
+                    <p>
+                        An Online System Designed To Simplify Booking & Management.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card p-4 shadow">
+                    <h5 class="text-primary-emphasis">Admin Management</h5>
+                    <p>
+                        Admin can view and manage appointments efficiently.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container text-center mb-5">
+        <h2 class="fw-bold">Never Miss an Appointment</h2>
+        <p class="text-muted mt-2">
+            Manage your schedule effectively with our Appointment Reminder System.
+        </p>
+        <a href="{% url 'bookappointment'%}" class="btn btn-secondary">
+            Get Started
+        </a>
+    </div>
+{% endblock %}

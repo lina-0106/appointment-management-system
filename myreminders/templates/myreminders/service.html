@@ -1,0 +1,83 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}appointment management system - about{% endblock %}
+{% block content %}
+    <div class="contain mt-5">
+        <div class="container text-center">
+            <h1 class="fw-bold display-5 text-success">Service</h1>
+            <b class="mt-2" style="font-size:1.5rem;">
+                <a href="{% url 'index'%}" class="text-danger text-decoration-none">Home</a>
+                <i class="fa-solid fa-circle fa-2xs" style="color: #f72c08;"></i>
+                <a href="{% url 'service'%}" class="text-dark text-decoration-none">Service</a>
+            </b>
+        </div>
+    </div>
+    <div class="container text-center my-5">
+        <h2 class="fw-bold mb-3">Our Service</h2>
+
+        <p class="fw-semibold text-muted text-primary-emphasis">
+            Our Service Simplify Appointment Booking, Remiders, And Management While Improving Communictaion And
+            Efficiency.
+        </p>
+        <p class="fw-semibold text-muted text-primary-emphasis">
+            The System Helps Users Book, Manage, And Receive Reminders For Appointments In A Simple And Efficient Way.
+        </p>
+        <p class="fw-semibold text-muted text-primary-emphasis">
+            Our Serviuces Automate Appointment Scheduling, Reminders, And Communictaion To Improve User Experience.
+        </p>
+        <div class="row justify-content-center mt-5 g-4">
+            <div class="col-md-6" style="width: 30rem;">
+                <div class="card h-100 shadow-sm p-3">
+                    <img src="{% static 'myreminder/img/bookappointments.png'%}" class="card-img-top" alt="...">
+                    <h5 class="fw-bold text-primary-emphasis text-center mb-3">Appointment Booking Service</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">User Can Book Appointments Online Easily</li>
+                        <li class="list-group-item">Select Preferred Date And Time</li>
+                        <li class="list-group-item">Stores Booking Details In The System</li>
+                        <li class="list-group-item">Sends Confirmation After Successful Booking</li>
+                    </ul>
+                    <a href="{% url 'bookappointment'%}" class="btn btn-success">Book Appointment</a>
+                </div>
+            </div><br>
+            <div class="col-md-6" style="width: 30rem;">
+                <div class="card h-100 shadow-sm p-3">
+                    <img src="{% static 'myreminder/img/appreminder.webp'%}" class="card-img-top" alt="...">
+                    <h5 class="fw-bold text-primary-emphasis text-center mb-3">Appointment Reminder Service</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Sends Automatic Reminders Before The Appointment</li>
+                        <li class="list-group-item">Notify Users Via SMS/Email/WhatsApp</li>
+                        <li class="list-group-item">Reduces Missed And Delayed Appointments</li>
+                        <li class="list-group-item">Time-Saving Automation</li>
+                    </ul>
+                    <a href="{% url 'bookappointment'%}" class="btn btn-success">Book Appointment</a>
+                </div>
+            </div><br>
+            <div class="col-md-6" style="width: 30rem;">
+                <div class="card h-100 shadow-sm p-3">
+                    <img src="{% static 'myreminder/img/contactimg.webp'%}" class="card-img-top" alt="...">
+                    <h5 class="fw-bold text-primary-emphasis text-center mb-3">Contact & Support Service</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Users Can Contact The Service Provider Easily</li>
+                        <li class="list-group-item">Provides Phone Number And Email Support</li>
+                        <li class="list-group-item">Helps Users With Appointment-Related Queries</li>
+                        <li class="list-group-item">Improves Communication And Customer Trust</li>
+                    </ul>
+                    <a href="{% url 'bookappointment'%}" class="btn btn-success">Book Appointment</a>
+                </div>
+            </div><br>
+            <div class="col-md-6" style="width: 30rem;">
+                <div class="card h-100 shadow-sm p-3">
+                    <img src="{% static 'myreminder/img/appmann.jpg'%}" class="card-img-top" alt="...">
+                    <h5 class="fw-bold text-primary-emphasis text-center mb-3">Appointment Management Service</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">View All Book Appointments In One Place</li>
+                        <li class="list-group-item">Update Or Reschedule Appointments Easily</li>
+                        <li class="list-group-item">Cancel Appointments When Needed</li>
+                        <li class="list-group-item">Maintains Appoitment History</li>
+                    </ul>
+                    <a href="{% url 'bookappointment'%}" class="btn btn-success">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

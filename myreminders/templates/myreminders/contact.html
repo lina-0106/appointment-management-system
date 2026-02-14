@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}appointment management system - about{% endblock %}
+{% block content %}
+    <div class="containn mt-5">
+        <div class="container text-center">
+            <h1 class="fw-bold display-5 text-success">Contact Us</h1>
+            <b class="mt-2" style="font-size:1.5rem;">
+                <a href="{% url 'index'%}" class="text-danger text-decoration-none">Home</a>
+                <i class="fa-solid fa-circle fa-2xs" style="color: #f72c08;"></i>
+                <a href="{% url 'contact'%}" class="text-dark text-decoration-none">Contact</a>
+            </b>
+        </div>
+    </div>
+    <div class="container mt-5 col-md-6 mx-auto">
+        <div class="contact">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-success text-center">
+                {{message}}
+            </div>
+            {% endfor %}
+            {% endif %}
+            <form method="POST" class="mt-4">
+                {% csrf_token %}
+                <h3 class="text-center">If You Have Any Quries Please Contact Us</h3>
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success btn-sm w-100 mt-2">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
