@@ -4,63 +4,139 @@
 {% block content %}
 <div class="containers mt-5">
     <div class="container text-center">
-        <h1 class="text-success fw-bold">About Us</h1>
-        <b class="mt-2" style="font-size:1.5rem;">
-            <a href="{% url 'index'%}" class="text-danger text-decoration-none">Home</a>
+
+        <h1 class="text-success fw-bold mb-3 display-5">About Us</h1>
+
+        <div class="d-flex justify-content-center align-items-center gap-2" style="font-size:1.2rem;">
+
+            <a href="{% url 'index'%}" class="text-danger text-decoration-none fw-semibold">
+                Home
+            </a>
+
             <i class="fa-solid fa-circle fa-2xs" style="color: #f72c08;"></i>
-            <a href="{% url 'about'%}" class="text-dark text-decoration-none">About</a>
-        </b>
+
+            <a href="{% url 'about'%}" class="text-dark text-decoration-none fw-semibold">
+                About
+            </a>
+
+        </div>
+
     </div>
 </div>
 
 <div class="container text-center my-5">
-    <h2 class="fw-bold mb-3">About Appointment Management System</h2>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
 
-    <p class="fw-semibold text-muted text-primary-emphasis">
-        The Appointment Reminder System is a web-based application developed using the
-        Python Django framework.
-    </p>
-    <p class="fw-semibold text-muted text-primary-emphasis">
-        It helps users schedule, manage, and track appointments efficiently.
-    </p>
-    <p class="fw-semibold text-muted text-primary-emphasis">
-        Admin users can monitor appointments and update their status easily.
-    </p>
+                <h2 class="fw-bold mb-4">
+                    About Appointment Management System
+                </h2>
+
+                <p class="fw-semibold text-muted mb-3">
+                    The Appointment Management System is a web-based
+                    application developed using the Python Django framework.
+                </p>
+
+                <p class="fw-semibold text-muted mb-3">
+                    It helps users schedule, manage, and track appointments efficiently.
+                </p>
+
+                <p class="fw-semibold text-muted">
+                    Admin users can monitor appointments and
+                    update their status easily.
+                </p>
+
+            </div>
+        </div>
+    </div>
 
     <div class="row justify-content-center mt-5 g-4">
         <div class="col-md-4">
             <div class="card h-100 shadow-sm p-3">
-                <h5 class="fw-bold text-primary-emphasis text-center mb-3">Technologies Used</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Python – Backend Logic</li>
-                    <li class="list-group-item">Django – Framework</li>
-                    <li class="list-group-item">HTML – Structure</li>
-                    <li class="list-group-item">CSS & Bootstrap – Styling</li>
+                <h5 class="fw-bold text-primary-emphasis text-center mb-3">
+                    Technologies Used
+                </h5>
+
+                <ul class="list-group list-group-flush feature-list">
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>Python – Backend Logic</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>Django – Framework</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>HTML – Structure</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>CSS & Bootstrap – Styling</span>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card h-100 shadow-sm p-3">
-                <h5 class="fw-bold text-primary-emphasis text-center mb-3">Why Choose Us?</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Simple & User-Friendly Interface</li>
-                    <li class="list-group-item">Quick Appointment Booking</li>
-                    <li class="list-group-item">Secure Data Handling</li>
-                    <li class="list-group-item">Time-Saving Automation</li>
+                <h5 class="fw-bold text-primary-emphasis text-center mb-3">
+                    Why Choose Us?
+                </h5>
+
+                <ul class="list-group list-group-flush feature-list">
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>Simple & User-Friendly Interface</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>Quick Appointment Booking</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>Secure Data Handling</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>Time-Saving Automation</span>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card h-100 shadow-sm p-3">
-                <h5 class="fw-bold text-primary-emphasis text-center mb-3">Key Features</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Online Appointment Booking</li>
-                    <li class="list-group-item">Appointment Status Tracking</li>
-                    <li class="list-group-item">Admin Management Panel</li>
-                    <li class="list-group-item">Responsive Design</li>
+                <h5 class="fw-bold text-primary-emphasis text-center mb-3">
+                    Key Features
+                </h5>
+
+                <ul class="list-group list-group-flush feature-list">
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>Online Appointment Booking</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>Appointment Status Tracking</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>Admin Management Panel</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center">
+                        <i class="fa-solid fa-star me-2"></i>
+                        <span>Responsive Design</span>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
-</div>
 {% endblock %}

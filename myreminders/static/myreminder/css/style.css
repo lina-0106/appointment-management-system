@@ -22,7 +22,6 @@ body {
   color:peachpuff !important;
 }
 h1, h2 {
-  letter-spacing: 1px;
   color:black;
 }
 .card {
@@ -85,47 +84,66 @@ button {
 footer {
   font-size: 14px;
 }
+
 .hero-section {
-  height: 90vh;
-  background-image: url("../img/bg.jpg"); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow:2px 4px 6px rgb(87, 87, 87,0.3);
-  display: flex;
-  align-items: center;
-  padding: 100px; 
-  border-radius: 10px;
-  margin-top:70px;
-  justify-content: center;
-  filter:brightness(1.4);
-  position: relative;
-  overflow: hidden;
+    min-height: 80vh;
+    background-image:url("../img/bg.jpg");
+    display: flex;
 }
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.15);
-}
+
 .hero-content {
-  position: relative;
-  color: #fff;
-  z-index: 2;
+    animation: fadeIn 1s ease-in-out;
 }
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  font-family: georgia;
+
+.card {
+    border-radius: 12px;
+    transition: 0.3s ease;
 }
-.hero-content p {
-  font-size: 1.8rem;
-  font-family:gill sans;
-  font-weight: bold;
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
+
+.btn-success, .btn-secondary {
+    transition: 0.3s ease;
+}
+
+.btn-success:hover,
+.btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.feature-card {
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.feature-card i {
+    transition: 0.3s ease;
+}
+
+.feature-card:hover i {
+    transform: scale(1.2);
+}
+
+.btn-success {
+    transition: 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: scale(1.05);
+}
+
 .containers{
   background-image: url("../img/laptops.jpg");
   box-shadow:2px 4px 6px rgb(87, 87, 87,0.3);
@@ -137,7 +155,7 @@ footer {
   padding: 100px; 
   border-radius: 10px;
   margin-top:70px;
-  filter:brightness(1.1);
+  filter:brightness(1.2);
   display:flex;
   overflow:auto;
 }
@@ -152,7 +170,7 @@ footer {
   padding: 100px; 
   border-radius: 10px;
   margin-top:70px;
-  filter:brightness(1.1);
+  filter:brightness(1.2);
   display:flex;
   overflow:auto;
   color:red;
@@ -168,7 +186,7 @@ footer {
   padding: 100px; 
   border-radius: 10px;
   margin-top:70px;
-  filter:brightness(1.1);
+  filter:brightness(1.4);
   display:flex;
   overflow:auto;
   color:red;
@@ -205,5 +223,78 @@ footer {
   overflow:auto;
   color:red;
 }
+.span1{
+    height:17vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;  
+    color:black;   
+}
+@keyframes spanclip{
+    to{
+        background-position: left;
+    }
+}
+span{
+    display:inine-block;
+    opacity:0;
+    filter:blur(4px);
+}
+span:nth-child(1){
+    animation:fade-in 0.8s 0.3s forwards cubic-bezier(0.11,0,0.5,0);
+}
+span:nth-child(2){
+    animation:fade-in 0.8s 0.6s forwards cubic-bezier(0.11,0,0.5,0);
+}
+span:nth-child(3){
+    animation:fade-in 0.8s 0.8s forwards cubic-bezier(0.11,0,0.5,0);
+}
+span:nth-child(4){
+    animation:fade-in 0.8s 1s forwards cubic-bezier(0.11,0,0.5,0);
+}
+span:nth-child(5){
+    animation:fade-in 0.8s 1.2s forwards cubic-bezier(0.11,0,0.5,0);
+}
+@keyframes fade-in{
+    100%{opacity:1;
+    filter:blur(0px);
+    }
+}
+.form-control:focus,
+.form-select:focus {
+    box-shadow: none;
+    border-color: #198754;
+}
 
+.btn-success {
+    transition: 0.3s ease;
+}
 
+.btn-success:hover {
+    transform: scale(1.03);
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+.btn-primary {
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.03);
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #198754;
+}
+
+.btn-success {
+    transition: 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: scale(1.03);
+}

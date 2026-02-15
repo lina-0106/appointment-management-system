@@ -1,56 +1,78 @@
 {% extends 'base.html'%}
 {% load static %}
-{% block title %}appointment reminder system - about{% endblock %}
+{% block title %}appointment reminder system - index{% endblock %}
 {% block content %}
-    <div class=" hero-section text-center">
-        <div class="container mt-5 hero-content">
-            <h1 class="text-dark">Appointment Management System</h1>
-            <p class="text-primary-emphasis">
-                Easily book and manage your appointments online
-            </p>
-            <button type="button" class="btn btn-secondary"><a href="{% url 'bookappointment'%}"
-                    class="text-white text-decoration-none">Book Appointment</a></button>
-        </div>
-    </div>
-    <div class="container my-5">
-        <div class="row text-center">
+<div class="hero-section text-center d-flex align-items-center">
+    <div class="container hero-content">
+        <h1 class="fw-bold display-4">
+            <span class="text-dark">Appointment</span>
+            <span class="text-dark">Management</span>
+            <span class="text-dark">System</span>
+        </h1>
 
-            <div class="col-md-4 mb-4">
-                <div class="card p-4 shadow">
-                    <h5 class="text-primary-emphasis">Easy Booking</h5>
-                    <p>
-                        Users can book appointments quickly using a simple online form.
-                    </p>
-                </div>
-            </div>
+        <h2 class="text-emphasis mt-3 mb-4">
+            Easily book and manage your appointments online
+        </h2>
 
-            <div class="col-md-4 mb-4">
-                <div class="card p-4 shadow">
-                    <h5 class="text-primary-emphasis">Appointment Management System</h5>
-                    <p>
-                        An Online System Designed To Simplify Booking & Management.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card p-4 shadow">
-                    <h5 class="text-primary-emphasis">Admin Management</h5>
-                    <p>
-                        Admin can view and manage appointments efficiently.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="container text-center mb-5">
-        <h2 class="fw-bold">Never Miss an Appointment</h2>
-        <p class="text-muted mt-2">
-            Manage your schedule effectively with our Appointment Reminder System.
-        </p>
-        <a href="{% url 'bookappointment'%}" class="btn btn-secondary">
-            Get Started
+        <a href="{% url 'bookappointment'%}" class="btn btn-success px-4 py-2 fw-semibold">
+            Book Appointment
         </a>
     </div>
+</div>
+<div class="container my-5">
+    <div class="row text-center g-4">
+
+        <div class="col-md-4">
+            <div class="card h-100 p-4 shadow feature-card">
+                <div class="mb-3">
+                    <i class="fa-solid fa-calendar-check fa-2x text-success"></i>
+                </div>
+                <h5 class="fw-bold text-primary-emphasis">
+                    Easy Booking
+                </h5>
+                <p class="text-muted">
+                    Users can book appointments quickly using a simple online form.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 p-4 shadow feature-card">
+                <div class="mb-3">
+                    <i class="fa-solid fa-list-check fa-2x text-success"></i>
+                </div>
+                <h5 class="fw-bold text-primary-emphasis">
+                    Appointment Management
+                </h5>
+                <p class="text-muted">
+                    An online system designed to simplify booking and management.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 p-4 shadow feature-card">
+                <div class="mb-3">
+                    <i class="fa-solid fa-user-shield fa-2x text-success"></i>
+                </div>
+                <h5 class="fw-bold text-primary-emphasis">
+                    Admin Management
+                </h5>
+                <p class="text-muted">
+                    Admin can view and manage appointments efficiently.
+                </p>
+            </div>
+        </div>
+
+<div class="container text-center mb-5">
+    <h2 class="fw-bold mb-3">Never Miss an Appointment</h2>
+
+    <p class="text-muted fs-5">
+        Manage your schedule effectively with our Appointment Reminder System.
+    </p>
+
+    <a href="{% url 'bookappointment'%}" class="btn btn-success px-4 py-2 fw-semibold mt-3">
+        Get Started
+    </a>
+</div>
 {% endblock %}

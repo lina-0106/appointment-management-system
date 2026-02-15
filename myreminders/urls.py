@@ -13,7 +13,7 @@ urlpatterns=[
     path('accounts/profile',views.index,name='profile'),
     path('appointments/', views.appointments_api, name='appointments_api'),
     path('contacts/', views.contacts_api, name='contacts_api'),
-    path('regisster/',views.register,name='register'),
+    path('register/',views.register,name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
 ]
