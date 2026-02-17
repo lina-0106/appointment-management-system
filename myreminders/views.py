@@ -17,11 +17,11 @@ def bookappointment(request):
         name=request.POST.get('name')
         email=request.POST.get('email')
         time=request.POST.get('time')
-        status=request.POST.get('status')
+        service=request.POST.get('service') # VERY IMPORTANT
         date=request.POST.get('date')
         phone=request.POST.get('phone')
 
-        appointment=Appointment(name=name,email=email,date=date,time=time,status=status,phone=phone)
+        appointment=Appointment(name=name,email=email,time=time,service=service,date=date,phone=phone)
         appointment.save()
         messages.success(request, 'Your appointment has been booked successfully!')
         return redirect('bookappointment')
